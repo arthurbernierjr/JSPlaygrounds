@@ -10,14 +10,24 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [{
-      exclude: /node_modules/,
-      loader: 'babel'
-    }]
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
+    ]
   },
   resolve: {
-    root: path.resolve(__dirname, 'src'),
-    extensions: ['', '.js', '.jsx']
+    alias: {
+      root: path.resolve(__dirname, 'src')
+    },
+    extensions: ['.js', '.jsx']
   },
   devServer: {
     historyApiFallback: true,

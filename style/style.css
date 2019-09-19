@@ -1,6 +1,6 @@
 body {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 21px;
   color: #333;
   margin: 0;
   padding: 0;
@@ -145,6 +145,9 @@ body {
 .cm-s-default .cm-error {color: #f00;}
 .cm-invalidchar {color: #f00;}
 
+.result {
+  font-size: 2rem;
+}
 .CodeMirror-composing { border-bottom: 2px solid; }
 
 /* Default styles for common addons */
@@ -252,7 +255,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
   border-width: 0;
   background: transparent;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 1.5rem;
   margin: 0;
   white-space: pre;
   word-wrap: normal;
